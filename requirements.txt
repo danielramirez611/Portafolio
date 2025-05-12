@@ -1,4 +1,4 @@
-jazzmin==2.6.0  # (o la versión actual que tengas)
+jazzmin
 asttokens==2.2.1
 backcall==0.2.0
 colorama==0.4.6
