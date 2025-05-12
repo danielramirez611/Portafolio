@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-xl-8">
+        <article class="text-white bg-dark rounded-4 p-4 shadow-lg border border-light-subtle">
+
+          <!-- Título -->
+       <!-- Título y fecha -->
+<header class="text-center mb-4">
+  <h1 class="fw-bold display-5 mb-3 text-gradient">{{ post.title }}</h1>
+  <p class="text-secondary small fw-semibold" style="letter-spacing: 0.5px;">
+    <i class="bi bi-calendar-event me-1"></i> {{ post.date|date:'F j, Y' }}
+  </p>
+</header>
+
+
+        <!-- Descripción antes de la imagen -->
+<div class="post-content fs-5 text-light text-justify mb-4" style="line-height: 1.8; text-align: justify;">
+  {{ post.description|safe }}
+</div>
+
+<!-- Imagen -->
+<!-- Imagen -->
+<figure class="mb-4">
+  <img src="{{ post.image.url }}" alt="{{ post.title }}"
+       class="img-fluid w-100 rounded-4 shadow-sm border border-secondary-subtle"
+       style="max-height: 480px; object-fit: cover; cursor: zoom-in;"
+       onclick="openImageModal(this.src)">
+</figure>
+
+
+          <!-- Volver -->
+          <div class="mt-5 text-center">
+            <a href="{% url 'blog:posts' %}" class="btn btn-outline-primary btn-lg rounded-pill px-5 py-2 shadow-sm">
+              <i class="bi bi-arrow-left me-2"></i> Volver al Blog
+            </a>
+          </div>
+        </article>
+        <!-- Modal de imagen ampliada -->
+<div id="imageModal" class="image-modal d-none">
+  <span class="image-modal-close" onclick="closeImageModal()">×</span>
+  <img class="image-modal-content" id="modalImage">
+</div>
+
+      </div>
+    </div>
+  </div>
+ 
+
+</section>
+{% endblock %}

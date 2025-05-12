@@ -1,0 +1,501 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+<!-- Hero Section -->
+<section id="hero">
+  <div class="container">
+    <h1 class="text-center mt-5 fw-bold">Hola, soy <span class="typer">Full Stack Developer.</span><span
+        class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></h1>
+    <div class="row">
+      <div class="col-md-1 social d-none d-md-flex flex-column justify-content-center">
+        <a href="https://www.instagram.com/danielramirez18rs/" target="_blank"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/daniel-isai-ramirez-soplopuco-a39179276/" target="_blank"><i
+            class="bi bi-linkedin"></i></a>
+        <a href="https://www.facebook.com/profile.php?id=100080867821197" target="_blank"><i
+            class="bi bi-facebook"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=51933928155&amp;text&amp;type=phone_number&amp;app_absent=0"
+          target="_blank"><i class="bi bi-whatsapp"></i></a>
+          
+      </div>
+      <div class="col-md-4">
+        <img src="{% static 'portfolio/profile.png'%}" alt="me" class="img-fluid mt-5 ms-lg-4">
+      </div>
+      <div class="col-md-7 d-flex flex-column justify-content-center  ">
+        <div class="hero-content px-lg-5">
+          <p>
+            Soy desarrollador Fullstack con fuerte orientación al desarrollo backend. Tengo experiencia construyendo
+            soluciones robustas utilizando tecnologías como Node.js, Express, .NET y Spring Boot con Java. Manejo bases
+            de datos relacionales como MySQL y SQL Server, así como bases de datos NoSQL como MongoDB y Firebase. En el
+            frontend, trabajo con frameworks como React y Angular, además de HTML, CSS y TypeScript. Mi enfoque está en
+            crear aplicaciones eficientes, seguras y escalables, comprometido con la mejora continua en desarrollo.
+          </p>
+
+
+
+
+          <a download="CV Daniel Ramirez" href="{% static 'portfolio/cv.pdf' %}" class="btn btn-outline-primary px-4"><i
+              class="bi bi-arrow-down-circle-fill m-1"></i>CV</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!--About STAR-->
+<section id="about">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="text-center fw-bold main-title"> Sobre Mi</h3>
+      <p class="text-center fw-bold ms-3 ps-4 sub-title">¿Quien soy?</p>
+    </div>
+    <div class="row">
+      <div class="col-md-12 col-lg-5">
+        <img src="{% static 'portfolio/about.jpg' %}" alt="about me" class="img-fluid rounded-2">
+      </div>
+      <div class="col-md-12 col-lg-7 gx-5 mt-3">
+      <p>
+  Soy Daniel Ramírez, estudiante de Diseño y Desarrollo de Software en TECSUP, beneficiario de la Beca 18. Como desarrollador Fullstack, domino tecnologías como Node.js, Java, Django y bases de datos SQL/NoSQL. Mi enfoque es desarrollar soluciones escalables y de alto impacto, liderando proyectos con herramientas como React, Express y SpringBoot. Comprometido con la innovación, busco transformar ideas en resultados tangibles.
+</p>
+
+
+
+        <a href="#" class="btn btn-primary">Leer más</a>
+        <div class="row mt-5 text-center exp">
+  <div class="col-6 col-lg-3">
+    <div class="d-flex justify-content-center">
+      <h4 class="fw-bold exp-number" data-val="3">0</h4>
+      <h5 class="mt-4 ps-1">+</h5>
+    </div>
+    <p>Experiencia</p>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="d-flex justify-content-center">
+      <h4 class="fw-bold exp-number" data-val="6">0</h4>
+      <h5 class="mt-4 ps-1">+</h5>
+    </div>
+    <p>Proyectos</p>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="d-flex justify-content-center">
+      <h4 class="fw-bold exp-number" data-val="6">0</h4>
+      <h5 class="mt-4 ps-1">+</h5>
+    </div>
+    <p>Clientes</p>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="d-flex justify-content-center">
+      <h4 class="fw-bold exp-number" data-val="25">0</h4>
+      <h5 class="mt-4 ps-1">+</h5>
+    </div>
+    <p>Logros</p>
+  </div>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+</section>
+<!--ABOUT END-->
+
+<!--SKILLS START-->
+<!-- Botones de alternancia -->
+<div id="two-seccion"class="text-center my-5">
+  <button class="btn btn-primary me-2" onclick="mostrarSeccion('tecnicas')">Habilidades Técnicas</button>
+  <button class="btn btn-secondary" onclick="mostrarSeccion('blandas')">Habilidades Blandas</button>
+</div>
+
+<!-- Sección HABILIDADES TÉCNICAS -->
+<section id="seccion-tecnicas" class="fade-section">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="text-center fw-bold main-title"> Mis Habilidades </h3>
+      <p class="text-center fw-bold sub-title">¿Qué sé yo?</p>
+    </div>
+    <div class="row gap-3 justify-content-center">
+ 
+
+    <div class="row gap-3 justify-content-center">
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <img src="{% static 'portfolio/html.svg' %}" alt="HTML">
+        <h5>HTML</h5>
+        
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <img src="{% static 'portfolio/css.svg' %}" alt="CSS">
+        <h5>CSS</h5>
+        
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <img src="{% static 'portfolio/js.svg' %}" alt="JavaScript">
+        <h5>JavaScript</h5>
+       
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <img src="{% static 'portfolio/php.svg' %}" alt="PHP">
+        <h5>PHP</h5>
+        
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <!-- Icono de Python (SVG embebido) -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 9h-7a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h3"/>
+          <path d="M12 15h7a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-3"/>
+          <path d="M8 9v-4a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v5a2 2 0 0 1 -2 2h-4a2 2 0 0 0 -2 2v5a2 2 0 0 0 2 2h4a2 2 0 0 0 2 -2v-4"/>
+          <path d="M11 6l0 .01"/>
+          <path d="M13 18l0 .01"/>
+        </svg>
+        <h5>PYTHON</h5>
+        
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <img src="{% static 'portfolio/figma.svg' %}" alt="Figma">
+        <h5>FIGMA</h5>
+       
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <!-- Icono React Native -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M6.357 9c-2.637 .68 -4.357 1.845 -4.357 3.175c0 2.107 4.405 3.825 9.85 3.825c.74 0 1.26 -.039 1.95 -.097"/>
+          <path d="M9.837 15.9c-.413 -.596 -.806 -1.133 -1.18 -1.8c-2.751 -4.9 -3.488 -9.77 -1.63 -10.873c1.15 -.697 3.047 .253 4.974 2.254"/>
+          <path d="M6.429 15.387c-.702 2.688 -.56 4.716 .56 5.395c1.783 1.08 5.387 -1.958 8.043 -6.804c.36 -.67 .683 -1.329 .968 -1.978"/>
+          <path d="M12 18.52c1.928 2 3.817 2.95 4.978 2.253c1.85 -1.102 1.121 -5.972 -1.633 -10.873c-.384 -.677 -.777 -1.204 -1.18 -1.8"/>
+          <path d="M17.66 15c2.612 -.687 4.34 -1.85 4.34 -3.176c0 -2.11 -4.408 -3.824 -9.845 -3.824c-.747 0 -1.266 .029 -1.955 .087"/>
+          <path d="M8 12c.285 -.66 .607 -1.308 .968 -1.978c2.647 -4.844 6.253 -7.89 8.046 -6.801c1.11 .679 1.262 2.706 .56 5.393"/>
+          <path d="M12.26 12.015h-.01c-.01 .13 -.12 .24 -.26 .24a.263 .263 0 0 1 -.25 -.26c0 -.14 .11 -.25 .24 -.25h-.01c.13 -.01 .25 .11 .25 .24"/>
+        </svg>
+        <h5>REACT</h5>
+        
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <!-- MySQL SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3"/>
+          <path d="M9 7h.01"/>
+        </svg>
+        <h5>MySQL</h5>
+        
+      </div>
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+        <!-- MongoDB SVG -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="76" height="76" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+          <path d="M12 3v19"/>
+          <path d="M18 11.227c0 3.273 -1.812 4.77 -6 9.273c-4.188 -4.503 -6 -6 -6 -9.273c0 -4.454 3.071 -6.927 6 -9.227c2.929 2.3 6 4.773 6 9.227z"/>
+        </svg>
+        <h5>MongoDB</h5>
+        
+      </div>
+    </div>
+<!--SKILLS END-->
+
+    </div>
+  </div>
+</section>
+
+<section id="seccion-blandas" class="fade-section  d-none">
+  <div class="container">
+    <div class="section-title">
+    <h3 class="text-center fw-bold main-title">Habilidades Blandas</h3>
+      <p class="text-center fw-bold sub-title">Lo que me define como profesional</p>
+    </div>
+    <div class="row gap-3 justify-content-center">
+ 
+
+    
+      <div class="col-4 col-lg-2 text-center p-3 skill">
+
+        <img src="{% static 'portfolio/equipo.png' %}" alt="Trabajo en equipo" width="64">
+        <h6 class="mt-2">Trabajo en equipo</h6>
+      </div>
+            <div class="col-4 col-lg-2 text-center p-3 skill">
+
+        <img src="{% static 'portfolio/liderazgo.png' %}" alt="Liderazgo" width="64">
+        <h6 class="mt-2">Liderazgo</h6>
+      </div>
+            <div class="col-4 col-lg-2 text-center p-3 skill">
+
+        <img src="{% static 'portfolio/adaptar.png' %}" alt="Adaptabilidad" width="64">
+        <h6 class="mt-2">Adaptabilidad</h6>
+      </div>
+          <div class="col-4 col-lg-2 text-center p-3 skill">
+
+        <img src="{% static 'portfolio/comunicacion.png' %}" alt="Comunicación" width="64">
+        <h6 class="mt-2">Comunicación asertiva</h6>
+      </div>
+<!--SKILLS END-->
+
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Script JS para alternar secciones -->
+<script>
+  function mostrarSeccion(tipo) {
+    const tecnicas = document.getElementById('seccion-tecnicas');
+    const blandas = document.getElementById('seccion-blandas');
+
+    if (tipo === 'tecnicas') {
+      tecnicas.classList.remove('d-none');
+      blandas.classList.add('d-none');
+    } else {
+      blandas.classList.remove('d-none');
+      tecnicas.classList.add('d-none');
+    }
+  }
+</script>
+
+<!-- CSS para la transición suave -->
+<style>
+  .fade-section {
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .fade-section.d-none {
+    opacity: 0;
+    pointer-events: none;
+    height: 0;
+    overflow: hidden;
+  }
+
+  .fade-section:not(.d-none) {
+    opacity: 1;
+  }
+</style>
+
+<!--SKILLS END-->
+<!--EXPERIENCIA START-->
+<section id="experiencias">
+  <div class="container">
+    <div class="section-title">
+      <h3 class="text-center fw-bold main-title"> Mi Experiencia </h3>
+      <p class="text-center fw-bold ms-4 ps-5 sub-title">Ámbitos de Desarrollo</p>
+    </div>
+    <div class="row">
+      <div class="col-lg-4 experiencia-box text-center mt-3">
+        <img src="{% static 'portfolio/frontend.png' %}" class="img-fluid mb-3" alt="Desarrollo Frontend">
+        <h3 class="fw-bold mb-2">Desarrollo Front-End</h3>
+        <p>Experiencia en diseño de interfaces responsivas utilizando Figma, WordPress, Kotlin y tecnologías web. Capacidad para conectar visualmente pantallas y mejorar la experiencia del usuario.</p>
+      </div>
+      <div class="col-lg-4 experiencia-box text-center mt-3">
+        <img src="{% static 'portfolio/backend.png' %}" class="img-fluid mb-3" alt="Desarrollo Backend">
+        <h3 class="fw-bold mb-2">Desarrollo Back-End</h3>
+        <p>Implementación de funcionalidades con Node.js, Laravel y Express. Programación de lógica de negocio, validación de sesiones, y consultas eficientes en MySQL y MariaDB.</p>
+      </div>
+      <div class="col-lg-4 experiencia-box text-center mt-3">
+        <img src="{% static 'portfolio/agil.png' %}" class="img-fluid mb-3" alt="Metodologías Ágiles">
+        <h3 class="fw-bold mb-2">Metodologías Ágiles</h3>
+        <p>Trabajo colaborativo bajo enfoques Lean y Agile. Participación activa en el desarrollo iterativo, priorización de tareas y enfoque en la entrega continua de valor al usuario.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-4 experiencia-box text-center mt-3">
+        <img src="{% static 'portfolio/base.png' %}" class="img-fluid mb-3" alt="Base de Datos">
+        <h3 class="fw-bold mb-2">Bases de Datos</h3>
+        <p>Diseño de esquemas y consultas SQL/MongoDB para la gestión de datos. Experiencia con bases de datos relacionales y no relacionales orientadas al rendimiento y la escalabilidad.</p>
+      </div>
+      <div class="col-lg-4 experiencia-box text-center mt-3">
+        <img src="{% static 'portfolio/seguridad.png' %}" class="img-fluid mb-3" alt="Seguridad y Autenticación">
+        <h3 class="fw-bold mb-2">Seguridad y Autenticación</h3>
+        <p>Implementación de autenticación robusta, gestión de roles y permisos, y control de acceso a sistemas. Integración de medidas de seguridad en plataformas educativas y móviles.</p>
+      </div>
+      <div class="col-lg-4 experiencia-box text-center mt-3">
+        <img src="{% static 'portfolio/personal.png' %}" class="img-fluid mb-3" alt="Desarrollo Personal">
+        <h3 class="fw-bold mb-2">Desarrollo Personal</h3>
+        <p>Participación en programas de liderazgo, mindfulness, creatividad y mentoría. Fortalecimiento de habilidades blandas y compromiso con el aprendizaje continuo y el trabajo en equipo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--EXPERIENCIA END-->
+
+
+
+
+<!--PORTAFOLIO START-->
+
+<section id="portafolio" class="py-5">
+  <div class="container">
+    <div class="section-title mb-5">
+      <h3 class="text-center fw-bold text-white display-5">Mi Portafolio</h3>
+      <p class="text-center text-secondary fs-5">Proyectos destacados y demostraciones</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      {% for project in projects %}
+      <div class="col-md-6 col-lg-4 d-flex align-items-stretch">
+        <div class="card custom-card w-100 h-100 d-flex flex-column text-white">
+          <div class="custom-img-container" onclick="openImageModal('{{ project.image.url }}')">
+  <img src="{{ project.image.url }}" alt="{{ project.title }}" class="img-fluid">
+</div>
+
+          <div class="card-body d-flex flex-column p-4">
+            <h5 class="fw-bold text-center mb-3 fs-4">{{ project.title }}</h5>
+            <p class="text-light text-center small">{{ project.description }}</p>
+
+            <div class="mt-auto d-flex flex-column gap-2">
+              {% if project.url %}
+              <a href="{{ project.url }}" class="btn custom-btn-demo w-100" target="_blank" rel="noreferrer">
+                <i class="bi bi-box-arrow-up-right me-1"></i> Ver Demo
+              </a>
+              {% endif %}
+
+              {% if project.github_url %}
+              <a href="{{ project.github_url }}" class="btn custom-btn-github w-100" target="_blank" rel="noreferrer">
+                <i class="bi bi-github me-1"></i> Ver en GitHub
+              </a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+
+
+<!--Modal-->
+<div class="modal fade" id="gallery-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">New message</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="imagenes/theme-1.png" alt="modal-img img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--pORTAFOLIO END-->
+<!--FOOTER START-->
+<footer class="mt-5">
+  <div class="container">
+    <div class="footer-logo text-center">
+      <img src="{% static 'portfolio/logo.png' %}" class="img-fluid footer-logo-img" alt="Logo">
+    </div>
+
+    <div class="footer-social d-flex justify-content-center gap-3 text-center mt-3">
+      <a href="https://www.facebook.com/profile.php?id=100080867821197" class="text-white"><i
+          class="bi bi-facebook"></i></a>
+      <a href="https://www.instagram.com/danielramirez18rs/" class="text-white"><i class="bi bi-instagram"></i></a>
+      <a href="https://www.youtube.com/channel/UCaHMT8c41nitgNtn99JS7-Q" class="text-white"><i
+          class="bi bi-youtube"></i></a>
+      <a href="https://www.linkedin.com/in/daniel-isai-ramirez-soplopuco-a39179276/" class="text-white"><i
+          class="bi bi-linkedin"></i></a>
+      <a href="https://api.whatsapp.com/send/?phone=51933928155&text&type=phone_number&app_absent=0"
+        class="text-white"><i class="bi bi-whatsapp"></i></a>
+
+
+    </div>
+    <div class="footer-copyright text-center mt-3 mt-lg-2">
+      <p>Copyright 2024 DR | Protafolio CV Digital Web</p>
+    </div>
+  </div>
+</footer>
+<!--FOOTER END-->
+
+
+<!-- Botón "Ir arriba" -->
+<span class="ir-arriba icon-arrow-up2">
+  <img src="{% static 'portfolio/arrow.svg' %}" alt="Flecha hacia arriba">
+</span>
+<!-- Script para el botón "Ir arriba" -->
+<script>
+  // Obtener el botón
+  var botonIrArriba = document.querySelector(".ir-arriba");
+
+  // Mostrar el botón cuando el usuario haya bajado 300px desde la parte superior de la página
+  window.addEventListener("scroll", function () {
+    if (window.pageYOffset > 300) {
+      botonIrArriba.style.display = "block";
+    } else {
+      botonIrArriba.style.display = "none";
+    }
+  });
+
+  // Animación para volver arriba cuando se hace clic en el botón
+  botonIrArriba.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth" // Desplazamiento suave
+    });
+  });
+</script>
+
+
+<!--Typed Js-->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<!--Boostrap Js-->
+<script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+<!--Main Js-->
+<script src="{% static 'main.js' %}"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('mainNavbar');
+
+    window.addEventListener("scroll", function () {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        // Scroll hacia abajo
+        navbar.classList.add("hidden");
+      } else {
+        // Scroll hacia arriba
+        navbar.classList.remove("hidden");
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  });
+</script>
+<!-- Modal para imagen ampliada -->
+<div id="imageModal" class="modal-custom d-none">
+  <span class="close-btn" onclick="closeModal()">×</span>
+  <img class="modal-content-img" id="modalImage">
+</div>
+<script>
+  function openImageModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+
+    modal.classList.remove("d-none");
+    modal.classList.add("d-flex");
+    modalImg.src = src;
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.classList.remove("d-flex");
+    modal.classList.add("d-none");
+  }
+
+  // Cerrar si se hace clic fuera de la imagen
+  document.addEventListener("click", function (event) {
+    const modal = document.getElementById("imageModal");
+    if (event.target === modal) {
+      closeModal();
+    }
+  });
+</script>
+
+
+{% endblock %}

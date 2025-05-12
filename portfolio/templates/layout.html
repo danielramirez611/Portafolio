@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Profesional</title>
+    <!--Boostrap CDN-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <!--Boostrap Icon CDN-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!--Custom CSS-->
+    <link rel="stylesheet"  href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body class="text-light">
+
+  {% include 'partials/navbar.html' %}
+
+  <div class="container p-4">
+    {% block content %}
+    {% endblock %}
+  </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('mainNavbar');
+
+    window.addEventListener("scroll", function () {
+      const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+      if (currentScroll > lastScrollTop && currentScroll > 100) {
+        // Scroll hacia abajo
+        navbar.classList.add("hidden");
+      } else {
+        // Scroll hacia arriba
+        navbar.classList.remove("hidden");
+      }
+
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.16"></script>
+<script>
+  new Typed('#typed-logo', {
+    strings: ['PORTAFOLIO'],
+    typeSpeed: 100,
+    showCursor: false
+  });
+</script>
+ <script>
+  function openImageModal(src) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.classList.remove("d-none");
+    modal.classList.add("d-flex");
+    modalImg.src = src;
+  }
+
+  function closeImageModal() {
+    const modal = document.getElementById("imageModal");
+    modal.classList.remove("d-flex");
+    modal.classList.add("d-none");
+  }
+
+  // Cerrar al hacer clic fuera de la imagen
+  document.addEventListener("click", function (e) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    if (e.target === modal) {
+      closeImageModal();
+    }
+  });
+</script>
+</body>
+
+</html>
+
