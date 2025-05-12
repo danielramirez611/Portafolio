@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-5#lj2_sg0h4$ax&3lrbf3506b(9&@)hrb#12)q60(462*wlizz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = [*]
 
 
 # Application definition
@@ -84,18 +84,10 @@ WSGI_APPLICATION = "django_portfolio.wsgi.application"
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.mysql",
-        "NAME": "sistema",
-        "USER": "root",
-        "PASSWORD": "",
-        "HOST": "127.0.0.1",
-        "PORT": "3306",
-        "OPTIONS": {
-            "init_command": "SET sql_mode='STRICT_TRANS_TABLES'",
-            "isolation_level": None,
-        },
-    }
+    'default': dj_database_url.config(
+        default='postgresql://sistema_8mgu_user:VUV0kms9KaX1SeMj4mrPFuFZIG3rs0D7@dpg-d0gl76je5dus73afi3p0-a.oregon-postgres.render.com/sistema_8mgu',
+        conn_max_age=600
+    )
 }
 def check_database_version_supported(self):
     pass  # 🚨 Ignora el chequeo de versión de MariaDB
