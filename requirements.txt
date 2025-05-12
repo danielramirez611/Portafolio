@@ -44,4 +44,4 @@ tomli==1.2.2
 typing-extensions==3.10.0.2
 psycopg2-binary
 dj-database-url
-jazzmin==2.5.1
+django-jazzmin==2.5.1
